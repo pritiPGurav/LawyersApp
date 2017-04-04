@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.rasp.lawyersapp.Fragments.KnowFragment"
+    android:weightSum="1"
+    android:padding="1dp"
+
+    android:background="@color/colorwhite"
+    >
+
+    <com.rasp.lawyersapp.view.EditTextDrawableCustomize
+        android:id="@+id/edt_search"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:padding="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight=".93"
+        android:drawablePadding="10dp"
+        android:hint="Search"
+        android:textColorHint="@color/grey"
+        android:textSize="17dp"
+        android:textColor="@color/colorblack"
+        />
+
+    <Button
+        android:id="@+id/btn_clear_text"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight=".07"
+        android:paddingRight="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ic_close"
+        />
+</LinearLayout>

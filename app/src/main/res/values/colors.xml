@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorblack">#000000</color>
+    <color name="grey">#AAB2BD</color>
+    <color name="lightGray">#c5cad1</color>
+    <color name="extraLightGray">#f0f0f0</color>
+    <color name="medium_grey_1">#ced1d2</color>
+    <color name="app_blue">#3f51b5</color>
+    <color name="ripple_color_grey">#40676767</color>
+</resources>

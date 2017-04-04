@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LawyersApp</string>
+    <string name="str_know">Know</string>
+    <string name="str_find">Find</string>
+    <string name="str_me">Me</string>
+    <string name="hello_blank_fragment">Hello</string>
+</resources>

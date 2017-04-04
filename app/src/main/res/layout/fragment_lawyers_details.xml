@@ -1,0 +1,247 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rasp.lawyersapp.Fragments.LawyersDetailsFragment"
+    android:background="@color/extraLightGray"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/bg_border_style"
+        android:id="@+id/relativeLayout"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_missionlogo" />
+
+
+       <LinearLayout
+           android:id="@+id/ll_lawyername"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/profile_pic"
+           android:gravity="center"
+           android:layout_marginTop="5dp"
+           >
+           <com.rasp.lawyersapp.view.TextViewCustomize
+               android:id="@+id/txt_lawyer_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/imageView"
+               android:layout_centerHorizontal="true"
+               android:text="Lawyer Name"
+               android:textSize="15dp"
+               android:textStyle="bold"
+               android:textColor="@color/colorblack"
+               />
+
+           <com.rasp.lawyersapp.view.TextViewCustomize
+               android:id="@+id/txt_lawyer_degree"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignBottom="@+id/txt_lawyer_name"
+               android:layout_marginLeft="11dp"
+               android:layout_toEndOf="@+id/imageView"
+               android:layout_toRightOf="@+id/imageView"
+               android:text="degree"
+               android:textColor="@color/colorblack"
+               android:textSize="12dp"/>
+       </LinearLayout>
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_lawyer_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_lawyername"
+            android:text="Category"
+            android:textColor="@color/colorblack"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_border_style"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        android:id="@+id/rl_address">
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_addr_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Address"
+            style="@style/TitleTxtStyle"
+            />
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_addr_lable"
+            android:text="Address/location"
+            style="@style/TxtStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/black_marker"
+            android:layout_alignBottom="@+id/txt_address"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_border_style"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_address"
+        android:id="@+id/rl_exp"
+        >
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_experience_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Experience"
+            style="@style/TitleTxtStyle"
+
+/>
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_experience_lable"
+            android:text="7 years experience"
+            style="@style/TxtStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_border_style"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_exp"
+        android:id="@+id/rl_about"
+        >
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_about_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="About Lawyer"
+            style="@style/TitleTxtStyle"
+
+            />
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_about_lawyer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_about_lable"
+            android:text="Represent clients in criminal and civil litigation and other legal proceedings, draw up legal documents, or manage or advise clients on legal transactions"
+            style="@style/TxtStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_review"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_border_style"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/rl_about"
+        android:layout_marginRight="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="5dp">
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_review_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Reviews"
+            style="@style/TitleTxtStyle"/>
+        <include
+            android:id="@+id/include"
+            android:layout_below="@+id/txt_review_lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/horizontal_review_layout"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Call"
+        style="@style/ButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_review"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="1dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor="@color/colorwhite"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="1dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorwhite"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="1dp">
+
+            <ImageView
+                android:id="@+id/cim_image"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/profile_pic_back"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_missionlogo" />
+
+            <LinearLayout
+                android:id="@+id/ll_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/cim_image"
+                android:layout_toLeftOf="@+id/txt_call"
+                android:layout_toRightOf="@+id/cim_image"
+                android:layout_toStartOf="@+id/txt_call"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ll_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <com.rasp.lawyersapp.view.TextViewCustomize
+                        android:id="@+id/txt_lawyer_name"
+                        style="@style/TxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:text="Lawyer Name"
+                        android:textStyle="bold" />
+
+                    <com.rasp.lawyersapp.view.TextViewCustomize
+                        android:id="@+id/txt_lawyer_degree"
+                        style="@style/TxtStyle_12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/txt_lawyer_name"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/txt_lawyer_name"
+                        android:gravity="center"
+                        android:text="Degree"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <com.rasp.lawyersapp.view.TextViewCustomize
+                    android:id="@+id/txt_location"
+                    style="@style/TxtStyle_12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:singleLine="true"
+                    android:text="Location" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_details"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/txt_call"
+                android:layout_toStartOf="@+id/txt_call" android:layout_marginRight="4dp">
+
+                <com.rasp.lawyersapp.view.TextViewCustomize
+                    android:id="@+id/txt_experience"
+                    style="@style/TxtSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="15 years experience"
+                    />
+
+                <com.rasp.lawyersapp.view.TextViewCustomize
+                    android:id="@+id/txt_review_count"
+                    style="@style/TxtSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:gravity="center"
+                    android:text="899 reviews" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/ll_details"
+                android:layout_toStartOf="@+id/txt_call">
+
+                <ImageView
+                    android:id="@+id/img_thumb_up"
+                    android:layout_width="22dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_like" />
+
+                <com.rasp.lawyersapp.view.TextViewCustomize
+                    android:id="@+id/txt_review_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    style="@style/TxtSmall"
+                    android:text="100%" />
+            </LinearLayout>
+
+            <com.rasp.lawyersapp.view.TextViewCustomize
+                android:id="@+id/txt_call"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ll_reviews"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorblack"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Call"
+                android:textColor="@color/colorwhite" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightGray"
+        android:visibility="gone" />
+</LinearLayout>

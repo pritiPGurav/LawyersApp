@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_border_style"
+    android:scrollbars="vertical"
+    tools:context="com.rasp.lawyersapp.Fragments.LawyersDetailsFragment">
+
+
+
+    <EditText
+        android:id="@+id/edt_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:hint="Mobile Number"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:paddingBottom="20dp" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_mobile_number"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:hint="Password"
+        android:imeOptions="actionNext"
+        android:inputType="textPassword"
+        android:paddingBottom="20dp" />
+
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edt_password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="91dp"
+        android:text="Sign in" />
+
+
+    <com.rasp.lawyersapp.view.TextViewCustomize
+        android:id="@+id/txt_forgot_pass"
+        style="@style/TxtStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:layout_below="@+id/edt_password"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        >
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            style="@style/TxtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <com.rasp.lawyersapp.view.TextViewCustomize
+            android:id="@+id/txt_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Sign up"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorblack"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

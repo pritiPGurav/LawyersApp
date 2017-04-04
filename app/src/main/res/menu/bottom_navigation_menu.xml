@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_know"
+        android:enabled="true"
+        android:icon="@drawable/ic_know"
+        android:title="@string/str_know"
+        />
+    <item
+        android:id="@+id/action_find"
+        android:enabled="true"
+        android:icon="@drawable/ic_find"
+        android:title="@string/str_find"
+        />
+    <item
+        android:id="@+id/action_me"
+        android:enabled="true"
+        android:icon="@drawable/ic_me"
+        android:title="@string/str_me"
+        />
+</menu>

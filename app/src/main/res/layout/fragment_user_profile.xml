@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_border_style"
+    android:scrollbars="vertical"
+    tools:context="com.rasp.lawyersapp.Fragments.LawyersDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_missionlogo" />
+
+
+            <EditText
+                android:id="@+id/edt_first_name"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_pic"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ."
+                android:hint="First Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+
+                />
+
+            <EditText
+                android:id="@+id/edt_last_name"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_first_name"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ."
+                android:hint="Last Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/edt_last_name"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_email"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ."
+                android:hint="Password"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
+
+            <RelativeLayout
+                android:id="@+id/rl_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_password"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/spinner_mob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="91+"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edt_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/spinner_mob"
+                    android:hint="Mobile"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/colorblack" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_call"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Next" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
